@@ -1,0 +1,51 @@
+.carousel {
+  margin-top: 2rem;
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: space-between;
+
+
+    position: relative;
+
+    &__seemore {
+      position: absolute;
+      top: -5rem;
+      right: 0%;
+      font-weight: var(--fw-semi-bold);
+      opacity: .8;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+
+      & span {
+        padding-left: .5em;
+      }
+    }
+
+    &__item {
+      width: 12rem;
+      height: 12rem;
+      background-color: var(--clr-neutral-800);
+      border-radius: 1rem;
+
+      &:nth-child(1) {
+        position: relative;
+        transform-style: preserve-3d;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 50%;
+          height: 70%;
+          top: 15%;
+          left: -15%;
+          border-radius: 0.5rem;
+          background-color: var(--clr-neutral-400);
+          transform: translateZ(-1px);
+        }
+      }
+    }
+  }
+}
