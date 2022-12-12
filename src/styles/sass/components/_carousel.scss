@@ -1,12 +1,11 @@
 .carousel {
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   &__list {
     display: flex;
     gap: 1rem;
     flex: 1;
     justify-content: space-between;
-
 
     position: relative;
 
@@ -15,32 +14,34 @@
       top: -5rem;
       right: 0%;
       font-weight: var(--fw-semi-bold);
-      opacity: .8;
+      opacity: 0.8;
       display: flex;
       align-items: center;
       text-transform: uppercase;
 
       & span {
-        padding-left: .5em;
+        padding-left: 0.5em;
       }
     }
 
     &__item {
-      width: 12rem;
-      height: 12rem;
-      background-color: var(--clr-neutral-800);
-      border-radius: 1rem;
+      & div {
+        width: 12rem;
+        height: 12rem;
+        background-color: var(--clr-neutral-800);
+        border-radius: 1rem;
+      }
 
-      &:nth-child(1) {
+      &:nth-child(1) div {
         position: relative;
         transform-style: preserve-3d;
         &::before {
           position: absolute;
           content: "";
           width: 50%;
-          height: 70%;
-          top: 15%;
-          left: -15%;
+          height: 90%;
+          top: 5%;
+          left: -7%;
           border-radius: 0.5rem;
           background-color: var(--clr-neutral-400);
           transform: translateZ(-1px);
