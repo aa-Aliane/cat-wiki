@@ -1,5 +1,7 @@
 import React from "react";
 import Carousel from "../components/Carousel";
+import Footer from "../components/Footer"
+import List from "../components/List";
 
 const Principale = () => {
   return (
@@ -20,7 +22,9 @@ const Principale = () => {
                 placeholder="enter you breed here"
               />
               <span class="material-icons">search</span>
+              <List />
             </div>
+            
           </div>
         </div>
         {/* section 2 */}
@@ -33,7 +37,9 @@ const Principale = () => {
         </div>
         {/* section 3*/}
         <div className="main__content__third">
-          <div>why you should have a cat?</div>
+          <div>
+            why you should have a cat?
+          </div>
           <div>
             Having a cat around you can actually trigger the release of calming
             chemicals in your body which lower your stress and anxiety leves
@@ -41,10 +47,18 @@ const Principale = () => {
           <div>
             read more <span class="material-icons">trending_flat</span>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <img src="src/assets/image1.png" alt="" />
+          </div>
+          <div>
+            <img src="src/assets/image2.png" alt="" />
+          </div>
+          <div>
+            <img src="src/assets/image3.png" sizes="800px 200px" alt="" />
+          </div>
         </div>
+        {/* footer */}
+        <Footer />
       </div>
     </div>
   );

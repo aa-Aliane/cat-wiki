@@ -1,0 +1,28 @@
+.footer {
+  width: 86%;
+  margin: 0 auto;
+  height: 12vh;
+  background-color: var(--clr-neutral-900);
+  border-radius: 2rem 2rem 0 0;
+  padding : 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clr-primary-100);
+  font-size: var(--fs-l);
+
+  & img {
+    filter: brightness(0) invert(1);
+    margin-left: 8%;
+  }
+
+  & span {
+    &:nth-child(1) {
+        margin-right: .5rem;
+    }
+    &:nth-child(2) {
+        text-decoration: underline;
+        font-weight: var(--fw-bold);
+    }
+  }
+}
