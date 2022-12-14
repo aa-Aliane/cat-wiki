@@ -1,0 +1,15 @@
+.img {
+  position: relative;
+  transform-style: preserve-3d;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-neutral-400);
+    width: 20%;
+    height: 90%;
+    left: -1rem;
+    top: 5%;
+    transform: translateZ(-1px);
+    border-radius: 1rem;
+  }
+}

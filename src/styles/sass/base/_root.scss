@@ -20,12 +20,15 @@
 
   --ff-primary: 'Montserrat', sans-serif;
   --default-radius: 0.5rem;
+
+  // default duration
+  --duration : .3s
 }
 
 // colors
 @each $clr, $shades in $colors {
   @each $key, $value in $shades {
-    .clr-#{$clr}-#{$key} {
+    .bg-#{$clr}-#{$key} {
       background-color: var(--clr-#{$clr}-#{$key});
     }
     .text-#{$clr}-#{$key} {

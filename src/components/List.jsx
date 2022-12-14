@@ -8,6 +8,12 @@ const List = () => {
       <li className="list__item">sdqfqsfqsf</li>
       <li className="list__item">sdfqsfqs</li>
       <li className="list__item">sdfqsfsqf</li>
+      <li className="list__item">sdqfqsfqsf</li>
+      <li className="list__item">sdfqsfqs</li>
+      <li className="list__item">sdfqsfsqf</li>
+      <li className="list__item">sdqfqsfqsf</li>
+      <li className="list__item">sdfqsfqs</li>
+      <li className="list__item">sdfqsfsqf</li>
     </ul>
   );
 };

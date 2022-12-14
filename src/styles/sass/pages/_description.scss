@@ -1,0 +1,11 @@
+.description {
+  margin: 0 auto;
+  width: 80%;
+  padding: 3rem 0;
+
+  &__first-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

@@ -1,9 +1,9 @@
 .list {
   position: absolute;
-  bottom: calc(-100% - 3em - 1rem);
+  bottom: calc(-100% - 3em - 6rem);
   // 100% : the size of the input; 3em pt and pb of the input; 1rem a small margin
   background-color: var(--clr-primary-100);
-  max-height: 15vh;
+  max-height: 20vh;
   width: 100%;
   border-radius: 1rem;
   color: var(--clr-neutral-700);
@@ -13,14 +13,12 @@
 
   &::-webkit-scrollbar {
     width: 0.3em;
-    
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 100vw;
     height: 1em;
     background: var(--clr-neutral-350);
-    
   }
 
   &::-webkit-scrollbar-track {
@@ -30,5 +28,13 @@
 
   &__item {
     padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--clr-primary-150);
+      transition: all var(--duration) linear;
+    }
   }
 }
