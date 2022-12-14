@@ -888,5 +888,8 @@ body {
   border-radius: 2rem;
   background-color: var(--clr-neutral-300);
 }
+.info-card__char2 span[activated-state=true] {
+  background-color: var(--clr-neutral-350);
+}
 
 /*# sourceMappingURL=style.css.map */

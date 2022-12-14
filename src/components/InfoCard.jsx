@@ -24,67 +24,67 @@ const InfoCard = () => {
       </li>
       <li className="info-card__char2">
         <h4>adaptibility: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>affection level: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>child friendly: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>grooming: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>intelligence: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>health issues: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>social needs: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
       <li className="info-card__char2">
         <h4>stranger friendly: </h4>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
-        <span activated-state={false}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
+        <span activated-state={"false"}></span>
       </li>
     </ul>
   );

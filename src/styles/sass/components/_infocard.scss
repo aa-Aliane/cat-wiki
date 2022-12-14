@@ -24,6 +24,10 @@
       height: 0.8rem;
       border-radius: 2rem;
       background-color: var(--clr-neutral-300);
+
+      &[activated-state="true"] {
+        background-color: var(--clr-neutral-350);
+      }
     }
   }
 }
