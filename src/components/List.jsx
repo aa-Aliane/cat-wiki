@@ -1,19 +1,16 @@
 import React from "react";
 
-const List = () => {
+const List = ({ items }) => {
   return (
     <ul className="list">
-      <li className="list__item">sfsqfqsf</li>
-      <li className="list__item">sfqsfqs</li>
-      <li className="list__item">sdqfqsfqsf</li>
-      <li className="list__item">sdfqsfqs</li>
-      <li className="list__item">sdfqsfsqf</li>
-      <li className="list__item">sdqfqsfqsf</li>
-      <li className="list__item">sdfqsfqs</li>
-      <li className="list__item">sdfqsfsqf</li>
-      <li className="list__item">sdqfqsfqsf</li>
-      <li className="list__item">sdfqsfqs</li>
-      <li className="list__item">sdfqsfsqf</li>
+      {items.length &&
+        items.map((breed, i) => {
+          return (
+            <li className="list__item" key={`breed${String(i)}`}>
+              {breed.name}
+            </li>
+          );
+        })}
     </ul>
   );
 };

@@ -4,19 +4,20 @@ import List from "./List";
 import { api } from "../api/api";
 import { useEffect } from "react";
 
-const getRandomCats = ({ setCats }) => {
-  api.get("/random").then((res) => {
-    setCats(res.data);
-  });
-};
-
 const Home = () => {
   const [cats, setCats] = useState([]);
+  const [breeds, setBreeds] = useState([]);
 
+  // random cats
   useEffect(() => {
     api.get("/random").then((res) => {
       console.log(res.data);
       setCats(res.data);
+    });
+
+    api.get("/breeds").then((res) => {
+      setBreeds(res.data);
+      console.log(res.data);
     });
   }, []);
 
@@ -36,7 +37,7 @@ const Home = () => {
               placeholder="enter you breed here"
             />
             <span class="material-icons">search</span>
-            <List />
+            <List items={breeds} />
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@ const Home = () => {
           <span>most</span> searched breeds
         </div>
         <div className="message">66+ breeds for you to discover</div>
-        <Carousel cats={cats}/>
+        <Carousel cats={cats} />
       </div>
       {/* section 3*/}
       <div className="home__third-section">
