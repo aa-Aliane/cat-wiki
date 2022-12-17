@@ -1,0 +1,16 @@
+.photos {
+  margin: 3rem 0;
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+
+    &__item {
+      width: 17rem;
+      height: 17rem;
+      border-radius: 1rem;
+      background-color: var(--clr-neutral-700);
+    }
+  }
+}

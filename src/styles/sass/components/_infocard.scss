@@ -4,8 +4,19 @@
   flex-direction: column;
   gap: 1.5rem;
 
+  &__general {
+    & p {
+      width : 50ch;
+    }
+  }
+
   &__char1 {
+    display: flex;
     text-transform: capitalize;
+    gap: 0.5rem;
+    & p {
+      font-weight: var(--fw-semi-bold);
+    }
   }
 
   &__char2 {
@@ -16,8 +27,8 @@
     width: 80%;
 
     & h4 {
-      width: 25%;
-      margin-right: 2rem;
+      width: 30%;
+      
     }
     & span {
       width: 4rem;

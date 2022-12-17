@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "./Carousel";
 import List from "./List";
+import { api } from "../api/api";
+import { useEffect } from "react";
+
+const getRandomCats = ({ setCats }) => {
+  api.get("/random").then((res) => {
+    setCats(res.data);
+  });
+};
 
 const Home = () => {
+  const [cats, setCats] = useState([]);
+
+  useEffect(() => {
+    api.get("/random").then((res) => {
+      console.log(res.data);
+      setCats(res.data);
+    });
+  }, []);
+
   return (
     <div className="home">
       {/* section 1 */}
@@ -29,7 +46,7 @@ const Home = () => {
           <span>most</span> searched breeds
         </div>
         <div className="message">66+ breeds for you to discover</div>
-        <Carousel />
+        <Carousel cats={cats}/>
       </div>
       {/* section 3*/}
       <div className="home__third-section">

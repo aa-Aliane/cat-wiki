@@ -9,8 +9,8 @@ const Principale = () => {
     <div className="main">
       <div className="main__content">
         <div className="main__content__menu"></div>
-        {/* <Home /> */}
-        <Description />
+        <Home />
+        {/* <Description /> */}
         {/* footer */}
         <Footer />
       </div>
