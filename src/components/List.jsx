@@ -2,7 +2,7 @@ import React from "react";
 
 const List = ({ items }) => {
   return (
-    <ul className="list">
+    <ul className="list" display-state={!items.length ? "false" : "true"}>
       {items.length &&
         items.map((breed, i) => {
           return (

@@ -3,10 +3,21 @@ import Carousel from "./Carousel";
 import List from "./List";
 import { api } from "../api/api";
 import { useEffect } from "react";
+import { useCatsStore } from "../Stores/catsState";
 
 const Home = () => {
   const [cats, setCats] = useState([]);
-  const [breeds, setBreeds] = useState([]);
+  const [breedsRendered, setBreedsRendered] = useState([]);
+  const initBreeds = useCatsStore((state) => state.initCats);
+  const breeds = useCatsStore((state) => state.cats);
+
+  const HandleSearch = (e) => {
+    setBreedsRendered(
+      breeds.filter((breed) => breed.name.includes(e.target.value))
+    );
+  };
+
+  
 
   // random cats
   useEffect(() => {
@@ -16,14 +27,15 @@ const Home = () => {
     });
 
     api.get("/breeds").then((res) => {
-      setBreeds(res.data);
-      console.log(res.data);
+      initBreeds(res.data);
+      console.log(breeds.length);
     });
   }, []);
 
   return (
     <div className="home">
       {/* section 1 */}
+      {breeds.length}
       <div className="home__first-section">
         <div>
           <img src="src/assets/CatwikiLogo.svg" alt="" />
@@ -35,10 +47,14 @@ const Home = () => {
               className="clr-primary-800"
               type="text"
               placeholder="enter you breed here"
+              onKeyDown={HandleSearch}
             />
             <span class="material-icons">search</span>
-            <List items={breeds} />
           </div>
+          <List
+            items={breedsRendered}
+            
+          />
         </div>
       </div>
       {/* section 2 */}
