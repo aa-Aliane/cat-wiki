@@ -55,7 +55,7 @@ const Home = () => {
   // Handle Breed Selection
   const HandleBreedSelection = (item) => {
     selectBreed(item);
-    setCurrentTab("Description");
+    setCurrentTab(2);
   };
 
   return (

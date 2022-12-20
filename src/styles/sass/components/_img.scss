@@ -1,6 +1,13 @@
-.img {
+.img-container {
   position: relative;
   transform-style: preserve-3d;
+  max-width: 18vw;
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
   &:before {
     content: "";
     position: absolute;

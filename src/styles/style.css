@@ -873,11 +873,17 @@ body {
   transition: all var(--duration) linear;
 }
 
-.img {
+.img-container {
   position: relative;
   transform-style: preserve-3d;
+  max-width: 18vw;
 }
-.img:before {
+.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.img-container:before {
   content: "";
   position: absolute;
   background-color: var(--clr-neutral-400);

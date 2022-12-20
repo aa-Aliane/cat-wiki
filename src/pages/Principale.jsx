@@ -11,8 +11,8 @@ const Principale = () => {
     <div className="main">
       <div className="main__content">
         <div className="main__content__menu"></div>
-        {currentTab === "Home" && <Home />}
-        {currentTab === "Description" && <Description />}
+        {currentTab === 1 && <Home />}
+        {currentTab === 2 && <Description />}
         {/* <Description /> */}
         {/* footer */}
         <Footer />
