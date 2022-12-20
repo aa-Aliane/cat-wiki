@@ -30,8 +30,6 @@ app.post("/breed", (request, reponse) => {
   let all = request.body.all;
   api.get(`images/search?breed_ids=${id}`).then((res) => {
     let content = res.data[0];
-    if (all) content = res.data;
-
     reponse.status(200).json(content);
   });
 });
