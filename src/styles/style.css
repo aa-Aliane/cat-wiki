@@ -735,11 +735,24 @@ body {
   width: 80%;
   padding: 3rem 0;
   color: var(--clr-neutral-700);
+  position: relative;
 }
 .description__first-section {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+.description__back-home {
+  position: absolute;
+  right: -5%;
+  top: -2rem;
+  font-size: var(--fs-xxxl);
+  font-weight: var(--fw-semi_bold);
+  transition: all var(--duration) linear;
+  cursor: pointer;
+}
+.description__back-home:hover {
+  color: var(--clr-neutral-350);
 }
 
 .carousel {
@@ -946,6 +959,7 @@ body {
   height: 17rem;
   border-radius: 1rem;
   background-color: var(--clr-neutral-700);
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

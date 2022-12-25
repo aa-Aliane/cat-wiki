@@ -27,11 +27,18 @@ app.get("/breeds", (request, reponse) => {
 // get image by breed id
 app.post("/breed", (request, reponse) => {
   let id = request.body.id;
-  let all = request.body.all;
-  api.get(`images/search?breed_ids=${id}`).then((res) => {
-    let content = res.data[0];
-    reponse.status(200).json(content);
-  });
+  let limit = request.body.limit;
+  if (limit)
+    api.get(`images/search?breed_ids=${id}&limit=${limit}`).then((res) => {
+      let content = res.data;
+      console.log("🚀 ~ file: app.js:34 ~ api.get ~ content", content)
+      reponse.status(200).json(content);
+    });
+  else
+    api.get(`images/search?breed_ids=${id}`).then((res) => {
+      let content = res.data[0];
+      reponse.status(200).json(content);
+    });
 });
 
 const port = 3000;

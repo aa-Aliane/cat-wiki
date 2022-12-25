@@ -1,40 +1,28 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { api } from "../api/api";
-import { useCatsStore } from "../Stores/catsState";
 
 const OtherPhotos = ({ id }) => {
-  const cats = useCatsStore((state) => state.breedRandomImgs);
-  const setCats = useCatsStore((state) => state.initBreedRandomImgs);
+  const [cats, setCats] = useState([]);
 
   useEffect(() => {
-    let all = [];
-    setCats([]);
-    for (let i = 0; i < 8; i++)
-      (async () => {
-        let p = new Promise(async (resolve) => {
-          let res = await api.post("/breed", { id: id });
-          resolve(res.data);
-        });
-        p.then((cat) => {
-          if (!all.map((c) => c.id).includes(cat.id)) {
-            all = [...all, cat];
-            setCats([...all, cat]);
-          }
-          console.log();
-        });
-      })();
+    api
+      .post("/breed", { id: id, limit: 8 })
+      .then((res) => setCats(res.data.slice(0, 8)));
   }, []);
   return (
     <div className="photos">
       <h1 className="photos__title">other photos</h1>
-      <ul className="photos__gallery">
+      <div className="photos__gallery">
         {cats.map((cat, i) => (
-          <li className="photos__gallery__item" key={`cat${i}`}>
-            <img src={cat.url} alt="" />
-          </li>
+          <img
+            className="photos__gallery__item"
+            key={`cat${i}`}
+            src={cat.url}
+            alt=""
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
